@@ -32,6 +32,12 @@ print(difference)
 print(difference_percent)
 # When STOCK price increase/decreases by 5% between yesterday and the day before yesterday then print("Get News").
 if difference>3:
+  
+## STEP 3: Use twilio.com/docs/sms/quickstart/python
+# Send a separate message with each article's title and description to your phone number. 
+#HINT 1: Consider using a List Comprehension.
+
+
     news_parameter={"qInTitle":COMPANY_NAME,
         "apiKey":news_api_key,
     }
@@ -47,22 +53,4 @@ if difference>3:
         from_='+15075007052',
         to='+923005078036'
          )
-
-
-## STEP 3: Use twilio.com/docs/sms/quickstart/python
-# Send a separate message with each article's title and description to your phone number. 
-#HINT 1: Consider using a List Comprehension.
-
-
-
-#Optional: Format the SMS message like this: 
-"""
-TSLA: 🔺2%
-Headline: Were Hedge Funds Right About Piling Into Tesla Inc. (TSLA)?. 
-Brief: We at Insider Monkey have gone over 821 13F filings that hedge funds and prominent investors are required to file by the SEC The 13F filings show the funds' and investors' portfolio positions as of March 31st, near the height of the coronavirus market crash.
-or
-"TSLA: 🔻5%
-Headline: Were Hedge Funds Right About Piling Into Tesla Inc. (TSLA)?. 
-Brief: We at Insider Monkey have gone over 821 13F filings that hedge funds and prominent investors are required to file by the SEC The 13F filings show the funds' and investors' portfolio positions as of March 31st, near the height of the coronavirus market crash.
-"""
 
